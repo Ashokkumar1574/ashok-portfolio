@@ -1,0 +1,129 @@
+body {
+  background-color: #0e0e0e;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.navbar a {
+  color: #ccc;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00ff99;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00ff99;
+}
+
+/* ✨ Contact Layout */
+.contact-container {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+/* 🔽 Left section with top-down images */
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 30px;
+  border-right: 1px solid #0e0e0e; /* invisible separation */
+}
+
+.profile-img {
+  width: 80%;
+  height: 300px;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00ff9944; /* glowing border */
+  border: 4px solid #00ff99; /* matches navbar but blends in */
+}
+
+/* 🔽 Right side contact info */
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  text-align: left;
+}
+
+.contact-right h1 {
+  font-size: 36px;
+  color: #00ff99;
+  margin-bottom: 20px;
+}
+
+.contact-right p,
+.contact-right a {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.8;
+  text-decoration: none;
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  box-shadow: 0 0 20px #00ff99aa;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, border 0.5s ease;
+  background: linear-gradient(#0e0e0e, #0e0e0e) padding-box,
+              linear-gradient(135deg, #00ff99, #00c8ff) border-box;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ff99, 0 0 40px #00c8ff;
+}
+
+.contact-right a:hover {
+  color: #00ff99;
+}
+
+/* 🧾 Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-right {
+    align-items: center;
+  }
+}

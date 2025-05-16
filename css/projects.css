@@ -1,0 +1,93 @@
+body {
+  background-color: #0e0e0e;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.navbar a {
+  color: #ccc;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00ff99;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00ff99;
+}
+
+.projects {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.projects h1 {
+  font-size: 36px;
+  color: #00ff99;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.1);
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-content {
+  text-align: left;
+}
+
+.project-content h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #00ffcc, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.project-content p {
+  font-size: 17px;
+  color: #ccc;
+  line-height: 1.7;
+}
